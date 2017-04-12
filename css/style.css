@@ -1,0 +1,260 @@
+/* GLOBAL */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFF;
+}
+.container {
+  width: 93%;
+  margin: 0 auto;
+}
+
+.btn-blue {
+  border: 0;
+  padding: 15px 23px;
+  background-color: #537FBE;
+  border-radius: 3.5%;
+  color: #FFF;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* HEADER */
+header {
+  background-color: #F6F8FC;
+  margin: 2px 0;
+  overflow: auto;
+  padding: 15px 0;
+}
+
+div#brand {
+  color: #6C91C8;
+  float: left;
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+header div.container div:nth-child(3) {
+    color: #6C91C8;
+    float: right;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+header div.container div:nth-child(2) {
+    color: #4C71a8;
+    font-size: 30px;
+    font-weight: bold;
+    float: right;
+    margin-left: 15px;
+}
+
+/* NAV */
+nav {
+  overflow: auto;
+}
+
+nav div div{
+  font-size: 40px;
+  float: left;
+  margin: 15px 0;
+  color: #6C91C8;
+}
+
+nav div div span {
+  font-weight: bolder;
+}
+
+nav ul {
+  float: right;
+  margin-top: 30px;
+}
+
+nav li {
+  display: inline;
+  float: left;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+nav li a{
+  text-decoration: none;
+  color: #6C91C8;
+}
+
+nav .current {
+  color: #3c6198;
+}
+
+
+/*  services section*/
+.services {
+  background-color: #537FBE;
+  margin-top: -38px;
+}
+
+.services .container {
+  padding: 65px 0;
+}
+
+.services h1{
+  font-size: 40px;
+  color: #FFF;
+}
+
+.services .lists {
+  overflow: auto;
+  padding: 0;
+}
+
+.services ul{
+  float: left;
+  width: 30%;
+  padding: 0;
+  margin: 0 8px;
+  margin-top: 5px;
+}
+.services li {
+  color: #FFF;
+  font-size: 27px;
+  margin: 15px 0;
+  display: flex;
+  padding: 0;
+}
+.services ul li:before {
+   content: "•";
+   font-size: 180%;
+   padding-right: 10px;
+   margin-top: -10px;
+}
+
+/*  Content  */
+.content , .content .container{
+  overflow: auto;
+}
+
+/*
+.content, .content .container,
+.content h1,
+.content .container div{
+  border: 2px solid black;
+}
+*/
+.content {
+  padding: 50px 0;
+}
+
+.content h1{
+  font-size: 40px;
+  color: #537FBE;
+}
+
+.content .container div{
+  width: 30%;
+  margin: 0 15px;
+  float: left;
+}
+
+.content .container div img{
+  width: 100%;
+}
+
+.content .container p{
+  color: #628AC3;
+  font-size: 18px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 30.0001px;
+  margin-top: 45px;
+}
+
+.btn-blue:hover{
+   background-color: #FFF;
+   color: #537FBE;
+   border: 2px solid #537FBE;
+   padding: 13px 21px;
+}
+
+/*  Clien testimonials  */
+
+.testimonials{
+  background-color: #F6F8FC;
+  overflow: auto;
+  padding: 40px 0;
+}
+
+
+.testimonials h1{
+  font-size: 40px;
+  color: #537FBE;
+  font-weight: normal;
+}
+
+.testimonials .container div{
+  width: 42%;
+  float: left;
+  margin: 45px 15px;
+}
+
+
+.testimonials .container img{
+  float: left;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.testimonials .container p{
+  color: #628AC3;
+  font-size: 18px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 30.0001px;
+  margin-top: 30px;
+}
+.testimonials span {
+  display: block;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Contact details */
+
+.contact{
+  background-color: #537FBE;
+  overflow: auto;
+  padding: 50px 0;
+}
+
+.contact div div{
+  width: 20%;
+  float: left;
+  margin: 0 15px;
+}
+
+.contact h1{
+  font-size: 34px;
+  color: #FFF;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: normal;
+}
+.contact p{
+  color: #FFF;
+  text-align: center;
+  font-size: 20px;
+  font-size: normal;
+  font-weight: lighter;
+  font-family: Roboto;
+}
+
+/* footer */
+footer {
+  background-color: #537FBE;
+  border: 1px solid #436FCE;
+  padding: 35px 0;
+}
+footer div div {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 100;
+}

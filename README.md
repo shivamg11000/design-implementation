@@ -1,2 +1,3 @@
-# design-implementation
-learning design to webpage.
+Learning Phase
+
+Implementing web desgin/template to webpage.
