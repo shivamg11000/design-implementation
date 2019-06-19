@@ -26,17 +26,19 @@ header {
   overflow: auto;
   padding: 15px 0;
 }
+header .container{
+  display: flex;
+  justify-content: space-around;
+}
 
 div#brand {
   color: #6C91C8;
-  float: left;
   font-size: 20px;
   margin-top: 5px;
 }
 
 header div.container div:nth-child(3) {
     color: #6C91C8;
-    float: right;
     font-size: 20px;
     margin-top: 5px;
 }
@@ -45,19 +47,29 @@ header div.container div:nth-child(2) {
     color: #4C71a8;
     font-size: 30px;
     font-weight: bold;
-    float: right;
-    margin-left: 15px;
+}
+
+@media only screen and (max-width:900px){
+ 
+  header .container{
+    flex-direction: column;
+  }
+  header .timing{display: none;}
 }
 
 /* NAV */
 nav {
   overflow: auto;
 }
-
+nav .container{
+  display: flex;
+}
+nav .navigation{
+  margin-left: auto;
+}
+nav ul{padding: 0;}
 nav div div{
   font-size: 40px;
-  float: left;
-  margin: 15px 0;
   color: #6C91C8;
 }
 
@@ -65,16 +77,10 @@ nav div div span {
   font-weight: bolder;
 }
 
-nav ul {
-  float: right;
-  margin-top: 30px;
-}
-
 nav li {
   display: inline;
-  float: left;
-  margin: 0 10px;
   font-weight: bold;
+  padding: 0 0.5em;
 }
 
 nav li a{
@@ -86,11 +92,20 @@ nav .current {
   color: #3c6198;
 }
 
+@media only screen and (max-width:900px){
+  nav .container{
+    flex-direction: column;
+  }
+  nav .navigation{
+    margin-left: 0;
+  }
+}
+
 
 /*  services section*/
 .services {
   background-color: #537FBE;
-  margin-top: -38px;
+  margin-top: -35px;
 }
 
 .services .container {
@@ -98,6 +113,7 @@ nav .current {
 }
 
 .services h1{
+  text-align: center;
   font-size: 40px;
   color: #FFF;
 }
@@ -105,27 +121,35 @@ nav .current {
 .services .lists {
   overflow: auto;
   padding: 0;
+  display: flex;
+  justify-content: space-around;
 }
 
 .services ul{
-  float: left;
-  width: 30%;
   padding: 0;
-  margin: 0 8px;
-  margin-top: 5px;
+  background-color: #437FAE;
+  max-width: 20em;
 }
 .services li {
   color: #FFF;
   font-size: 27px;
-  margin: 15px 0;
   display: flex;
   padding: 0;
+  background-color:  
 }
 .services ul li:before {
    content: "•";
+   transform: translateY(-0.26em);
    font-size: 180%;
-   padding-right: 10px;
-   margin-top: -10px;
+}
+@media only screen and (max-width:800px){
+  .services li{font-size: 20px; }
+  .services .lists{
+    flex-direction: column;
+    align-items: center;
+  }
+  .services ul{
+  }
 }
 
 /*  Content  */
@@ -149,10 +173,12 @@ nav .current {
   color: #537FBE;
 }
 
-.content .container div{
-  width: 30%;
-  margin: 0 15px;
-  float: left;
+.content .container .cards{
+  display: flex;
+  justify-content: space-around;  
+}
+.content .cards > div{
+  flex: 0 1 calc(100%/4);
 }
 
 .content .container div img{
@@ -165,7 +191,7 @@ nav .current {
   font-family: Roboto, Helvetica, Arial, sans-serif;
   font-weight: 300;
   line-height: 30.0001px;
-  margin-top: 45px;
+  margin-top: 25px;
 }
 
 .btn-blue:hover{
@@ -173,6 +199,17 @@ nav .current {
    color: #537FBE;
    border: 2px solid #537FBE;
    padding: 13px 21px;
+}
+
+@media only screen and (max-width:700px){
+  .content .cards{
+    flex-direction: column;
+    align-items: center;
+  } 
+  .content .cards > div{
+    max-width :25em;
+    margin-bottom: 2em;
+  } 
 }
 
 /*  Clien testimonials  */
@@ -190,12 +227,13 @@ nav .current {
   font-weight: normal;
 }
 
-.testimonials .container div{
-  width: 42%;
-  float: left;
-  margin: 45px 15px;
+.testimonials .container > div{
+  display: flex;  
+  justify-content: space-around;
 }
-
+.testimonials .testimonial{
+  flex: 0 1 calc(100%/2.5);
+}
 
 .testimonials .container img{
   float: left;
@@ -216,7 +254,14 @@ nav .current {
   font-weight: bold;
   font-size: 20px;
 }
-
+@media only screen and (max-width:700px){
+  .testimonials .container > div{
+    flex-direction: column;
+  }
+  .testimonials .testimonial{
+    margin-bottom: 2em;
+  }
+}
 /* Contact details */
 
 .contact{
@@ -225,12 +270,14 @@ nav .current {
   padding: 50px 0;
 }
 
-.contact div div{
-  width: 20%;
-  float: left;
-  margin: 0 15px;
+.contact .container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
-
+.contact .container > div{
+  flex: 0 1 calc(100%/4.5);
+}
 .contact h1{
   font-size: 34px;
   color: #FFF;
@@ -247,6 +294,16 @@ nav .current {
   font-family: Roboto;
 }
 
+@media only screen and (max-width:500px){
+  .contact .container{
+    display: block;
+  }
+}
+@media only screen and (max-width:800px){
+  .contact .container > div{
+    flex: 0 1 calc(100%/2.2);
+  }
+}
 /* footer */
 footer {
   background-color: #537FBE;
