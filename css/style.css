@@ -126,16 +126,16 @@ nav .current {
 }
 
 .services ul{
-  padding: 0;
-  background-color: #437FAE;
+  padding: 0.5em;
+  box-shadow: 0 0 4px rgba(0,0,0,0.2);
   max-width: 20em;
+  border-radius: 2%;
 }
 .services li {
   color: #FFF;
   font-size: 27px;
   display: flex;
   padding: 0;
-  background-color:  
 }
 .services ul li:before {
    content: "•";
@@ -146,9 +146,12 @@ nav .current {
   .services li{font-size: 20px; }
   .services .lists{
     flex-direction: column;
+    
     align-items: center;
   }
   .services ul{
+    padding: 0.6em;
+    width: 17em;
   }
 }
 
